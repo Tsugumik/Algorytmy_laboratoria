@@ -58,7 +58,7 @@ namespace Math_functions {
      * @return Wynik potęgowania a do potęgi n.
      */
     double POW(double a, int n) {
-        if(a == 0) {
+        if(n == 0) {
             return 1;
         }
 
