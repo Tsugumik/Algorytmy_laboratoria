@@ -37,10 +37,8 @@ namespace Math_functions {
      * @return Wynik potęgowania a do potęgi n.
      */
     int POW(int a, int n) {
-        if(a == 0) {
+        if(n == 0) {
             return 1;
-        } else if(a == 1) {
-            return a;
         }
 
         int pow = a;
@@ -62,8 +60,6 @@ namespace Math_functions {
     double POW(double a, int n) {
         if(a == 0) {
             return 1;
-        } else if(a == 1) {
-            return a;
         }
 
         double pow = a;
