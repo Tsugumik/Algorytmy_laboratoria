@@ -11,7 +11,7 @@ namespace Array_tools {
      * @param size - Rozmiar tablicy.
      * @return Maksymalna wartość w tablicy.
      */
-    int Max(const int arr[], const int& size) {
+    int Max(const int arr[], const int size) {
 
         int max = arr[0];
         for(int i=1; i<size; i++) {
@@ -26,7 +26,7 @@ namespace Array_tools {
      * @param size - Rozmiar tablicy.
      * @return Minimalna wartość w tablicy.
      */
-    int Min(const int arr[], const int& size) {
+    int Min(const int arr[], int size) {
         int min = arr[0];
         for(int i=1; i<size; i++) {
             if(arr[i] < min) min = arr[i];
@@ -40,7 +40,7 @@ namespace Array_tools {
      * @param size - Rozmiar tablicy.
      * @return Rozrzut wartości w tablicy.
      */
-    int Val_dispersion(const int arr[], const int& size) {
+    int Val_dispersion(const int arr[], int size) {
         return Max(arr, size) - Min(arr, size);
     }
 
@@ -51,7 +51,7 @@ namespace Array_tools {
      * @param size - Rozmiar tablicy.
      * @return Średnia arytmetyczna elementów w tablicy.
      */
-    double Avg(const int arr[], const int& size) {
+    double Avg(const int arr[], int size) {
         int sum = Sum(arr, size);
         return (double)sum/size;
     }
@@ -63,7 +63,7 @@ namespace Array_tools {
      * @param size - Rozmiar tablicy.
      * @return Średnia arytmetyczna elementów w tablicy.
      */
-    double Avg(const double arr[], const int& size) {
+    double Avg(const double arr[], int size) {
         double sum = Sum(arr, size);
         return sum/size;
     }
@@ -75,7 +75,7 @@ namespace Array_tools {
      * @param size - Rozmiar tablicy.
      * @return Suma wszystkich elementów w tablicy.
      */
-    int Sum(const int arr[], const int& size) {
+    int Sum(const int arr[], int size) {
         int sum = 0;
         for(int i=0; i<size; i++) {
             sum += arr[i];
@@ -90,7 +90,7 @@ namespace Array_tools {
      * @param size - Rozmiar tablicy.
      * @return Suma wszystkich elementów w tablicy.
      */
-    double Sum(const double arr[], const int& size) {
+    double Sum(const double arr[], int size) {
         double sum = 0.0;
         for(int i=0; i<size; i++) {
             sum += arr[i];
@@ -104,7 +104,7 @@ namespace Array_tools {
      * @param size - Rozmiar tablicy.
      * @return Odchylenie standardowe tablicy.
      */
-    double Standard_deviation(const int arr[], const int& size) {
+    double Standard_deviation(const int arr[], int size) {
         return sqrt(Variance(arr, size));
     }
 
@@ -114,7 +114,7 @@ namespace Array_tools {
      * @param size - Rozmiar tablicy.
      * @return Wariancja tablicy.
      */
-    double Variance(const int arr[], const int& size) {
+    double Variance(const int arr[], int size) {
         double diff_squares[size];
 
         // Oblicza średnią arytmetyczną elementów w tablicy
@@ -138,7 +138,7 @@ namespace Array_tools {
      * @param n - Numer elementu, który ma zostać zwrócony.
      * @return N-ty element tablicy.
      */
-    int Get_n_element(const int arr[], const int& n) {
+    int Get_n_element(const int arr[], int n) {
         return arr[n];
     }
 
@@ -148,7 +148,7 @@ namespace Array_tools {
      * @param size - Rozmiar tablicy.
      * @return Ilość elementów podzielnych przez 3 w tablicy.
      */
-    int Count_divisible_by_3(const int arr[], const int& size) {
+    int Count_divisible_by_3(const int arr[], int size) {
         int count = 0;
 
         for(int i=0; i<size; i++) {
