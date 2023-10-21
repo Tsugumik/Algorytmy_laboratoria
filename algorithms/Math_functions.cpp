@@ -87,6 +87,7 @@ namespace Math_functions {
                 return;
             }
             cout << "Rownanie jest sprzeczne!" << endl;
+            return;
         } else {
             x = -b / a;
             cout << "x = " << x << endl;
