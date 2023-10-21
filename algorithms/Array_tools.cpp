@@ -8,16 +8,16 @@ namespace Array_tools {
     int Max(const int arr[], const int size) {
 
         int max = arr[0];
-        for(int i=1; i<size; i++) {
-            if(arr[i] > max) max = arr[i];
+        for (int i = 1; i < size; i++) {
+            if (arr[i] > max) max = arr[i];
         }
         return max;
     }
 
     int Min(const int arr[], int size) {
         int min = arr[0];
-        for(int i=1; i<size; i++) {
-            if(arr[i] < min) min = arr[i];
+        for (int i = 1; i < size; i++) {
+            if (arr[i] < min) min = arr[i];
         }
         return min;
     }
@@ -28,17 +28,17 @@ namespace Array_tools {
 
     double Avg(const int arr[], int size) {
         int sum = Sum(arr, size);
-        return (double)sum/size;
+        return (double) sum / size;
     }
 
     double Avg(const double arr[], int size) {
         double sum = Sum(arr, size);
-        return sum/size;
+        return sum / size;
     }
 
     int Sum(const int arr[], int size) {
         int sum = 0;
-        for(int i=0; i<size; i++) {
+        for (int i = 0; i < size; i++) {
             sum += arr[i];
         }
         return sum;
@@ -46,7 +46,7 @@ namespace Array_tools {
 
     double Sum(const double arr[], int size) {
         double sum = 0.0;
-        for(int i=0; i<size; i++) {
+        for (int i = 0; i < size; i++) {
             sum += arr[i];
         }
         return sum;
@@ -64,7 +64,7 @@ namespace Array_tools {
         double avg = Avg(arr, size);
 
         // Oblicza kwadraty różnic między elementami a średnią arytmetyczną
-        for(int i=0; i<size; i++) {
+        for (int i = 0; i < size; i++) {
             diff_squares[i] = POW(arr[i] - avg, 2);
         }
 
@@ -82,8 +82,8 @@ namespace Array_tools {
     int Count_divisible_by_3(const int arr[], int size) {
         int count = 0;
 
-        for(int i=0; i<size; i++) {
-            if(arr[i] % 3 == 0) {
+        for (int i = 0; i < size; i++) {
+            if (arr[i] % 3 == 0) {
                 count++;
             }
         }
