@@ -1,12 +1,10 @@
 #include <cmath>
 #include "Math_functions.h"
-#include "Algorithms.h"
+#include "Array_tools.h"
 
-using namespace Math_functions;
 
 namespace Array_tools {
     int Max(const int arr[], const int size) {
-
         int max = arr[0];
         for (int i = 1; i < size; i++) {
             if (arr[i] > max) max = arr[i];
@@ -52,7 +50,6 @@ namespace Array_tools {
         return sum;
     }
 
-
     double Standard_deviation(const int arr[], int size) {
         return sqrt(Variance(arr, size));
     }
@@ -65,7 +62,7 @@ namespace Array_tools {
 
         // Oblicza kwadraty różnic między elementami a średnią arytmetyczną
         for (int i = 0; i < size; i++) {
-            diff_squares[i] = POW(arr[i] - avg, 2);
+            diff_squares[i] = Math_functions::POW(arr[i] - avg, 2);
         }
 
         // Oblicza średnią arytmetyczną kwadratów różnic

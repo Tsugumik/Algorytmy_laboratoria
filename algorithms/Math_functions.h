@@ -6,14 +6,14 @@ namespace Math_functions {
      * @param n - Liczba całkowita, dla której obliczana jest silnia.
      * @return Silnia liczby n.
      */
-    int Factorial(int);
+    int Factorial(int n);
 
     /**
      * Funkcja rekurencyjnie oblicza silnię liczby całkowitej.
      * @param n - Liczba całkowita, dla której obliczana jest silnia.
      * @return Silnia liczby n.
      */
-    int Factorial_rec(int);
+    int Factorial_rec(int n);
 
     /**
      * Funkcja oblicza a do potęgi n.
@@ -21,7 +21,7 @@ namespace Math_functions {
      * @param n - Wykładnik potęgi.
      * @return Wynik potęgowania a do potęgi n.
      */
-    int POW(int, int);
+    int POW(int a, int n);
 
     /**
      * Funkcja oblicza a do potęgi n
@@ -30,7 +30,7 @@ namespace Math_functions {
      * @param n - Wykładnik potęgi.
      * @return Wynik potęgowania a do potęgi n.
      */
-    double POW(double, int);
+    double POW(double a, int n);
 
     /**
      * Funkcja oblicza deltę dla równania kwadratowego ax^2 + bx + c.
@@ -39,7 +39,7 @@ namespace Math_functions {
      * @param c - Współczynnik c.
      * @return Delta równania kwadratowego.
      */
-    double Delta(const double &, const double &, const double &);
+    double Delta(const double &a, const double &b, const double &c);
 
     /**
      * Funkcja rozwiązuje równanie kwadratowe ax^2 + bx + c.
@@ -48,7 +48,7 @@ namespace Math_functions {
      * @param b - Współczynnik b.
      * @param c - Współczynnik c.
      */
-    void Quadratic_equation(const double &, const double &, const double &);
+    void Quadratic_equation(const double &a, const double &b, const double &c);
 
     /**
      * Funkcja rozwiązuje równanie liniowe ax + b.
@@ -56,5 +56,5 @@ namespace Math_functions {
      * @param a - Współczynnik a.
      * @param b - Współczynnik b.
      */
-    void Linear_equation(const double &, const double &);
+    void Linear_equation(const double &a, const double &b);
 }

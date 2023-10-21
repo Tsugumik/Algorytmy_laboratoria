@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../algorithms/Algorithms.h"
+#include "../algorithms/Array_tools.h"
 
 namespace zadania_18_10_2023 {
     void zad_6() {

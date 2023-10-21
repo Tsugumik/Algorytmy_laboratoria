@@ -3,8 +3,8 @@
 
 namespace zadania_18_10_2023 {
     void zad_4() {
-        using namespace Math_functions;
         using std::cout, std::cin, std::endl;
+        using Math_functions::POW;
 
         int a, n;
 

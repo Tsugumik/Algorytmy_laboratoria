@@ -4,6 +4,7 @@
 namespace zadania_18_10_2023 {
     void zad_5() {
         using std::cout, std::cin, std::endl;
+        using Algorithms::Sum_of_digits;
 
         int a;
 

@@ -4,6 +4,7 @@
 namespace zadania_18_10_2023 {
     void zad_2() {
         using std::cout, std::cin, std::endl;
+        using Algorithms::NWW, Algorithms::NWD;
         int a, b;
         cout << "Podaj liczbe a:";
         cin >> a;

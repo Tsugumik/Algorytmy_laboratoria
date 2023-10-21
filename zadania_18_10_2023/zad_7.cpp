@@ -4,7 +4,7 @@
 namespace zadania_18_10_2023 {
     void zad_7() {
         using std::cout, std::cin, std::endl;
-        using namespace Math_functions;
+        using Math_functions::Linear_equation, Math_functions::Quadratic_equation;
 
         int a, b, c;
         cout << "Podaj wspolczynnik a:";
