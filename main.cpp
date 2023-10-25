@@ -1,13 +1,12 @@
+#include <iostream>
 #include "zadania.h"
 
 int main() {
-    using namespace zadania_18_10_2023;
-    zad_1();
-    zad_2();
-    zad_3();
-    zad_4();
-    zad_5();
-    zad_6();
-    zad_7();
+    /*
+     * Instrukcja:
+     * Aby wykonać dane zadanie należy uruchomić je z danej przestrzeni nazw
+     * zadania_DATAZAJĘĆ::zad_NUMBERZADANIA
+     * np. zadania_25_10_2023::zad_1();
+     */
     return 0;
 }

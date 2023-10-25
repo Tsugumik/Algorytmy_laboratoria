@@ -2,7 +2,7 @@
 
 namespace Array_tools {
     /**
-     * Funkcja znajduje maksymalną wartość w tablicy.
+     * Funkcja znajduje maksymalną wartość w tablicy.-
      * @param arr - Tablica liczb całkowitych.
      * @param size - Rozmiar tablicy.
      * @return Maksymalna wartość w tablicy.

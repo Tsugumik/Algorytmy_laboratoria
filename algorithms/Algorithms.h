@@ -40,5 +40,21 @@ namespace Algorithms {
      * @return Suma cyfr liczby.
      */
     int Sum_of_digits(int n);
+
+    /**
+     * Funkcja sprawdza czy z boków o podanej długości można stworzyć trójkąt.
+     * @param a - Bok trójkąta.
+     * @param b - Bok trójkąta.
+     * @param c - Bok trójkąta.
+     * @return Wartość logiczna true jeśli można utworzyć trójkąt, w przeciwnym wypadku false.
+     */
+    bool Can_triangle_be_formed(double a, double b, double c);
+
+    /**
+     * Funkcja sprawdza czy liczba jest pierwsza.
+     * @param n - Liczba
+     * @return Wartość logiczna true jeśli liczba jest pierwsza, w przeciwnym wypadku false.
+     */
+    bool Is_prime(int n);
 }
 

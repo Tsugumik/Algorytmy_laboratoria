@@ -1,5 +1,6 @@
 #include <cmath>
 #include <iostream>
+#include "Math_functions.h"
 
 namespace Math_functions {
     int Factorial(int n) {
