@@ -25,4 +25,10 @@ add_executable(ALG_18_10_2023 main.cpp
         zadania_25_10_2023/zad_6.cpp
         zadania_25_10_2023/zad_7.cpp
         algorithms/Matrix_tools.cpp
-        algorithms/Matrix_tools.h)
+        algorithms/Matrix_tools.h
+        zadania_8_11_2023/zad_1.cpp
+        zadania_8_11_2023/zad_2.cpp
+        zadania_8_11_2023/zad_3.cpp
+        zadania_8_11_2023/zad_4.cpp
+        zadania_8_11_2023/zad_5.cpp
+        zadania_8_11_2023/zad_6.cpp)

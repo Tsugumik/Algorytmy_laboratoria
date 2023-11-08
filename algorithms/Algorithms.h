@@ -52,9 +52,59 @@ namespace Algorithms {
 
     /**
      * Funkcja sprawdza czy liczba jest pierwsza.
-     * @param n - Liczba
+     * @param n - Liczba całkowita.
      * @return Wartość logiczna true jeśli liczba jest pierwsza, w przeciwnym wypadku false.
      */
     bool Is_prime(int n);
+
+    /**
+     * Funkcja sprawdza czy liczba jest doskonała.
+     * @param n - Liczba całkowita.
+     * @return Wartość logiczna true jeśli liczba jest doskonała, w przeciwnym wypadku false.
+     */
+    bool Is_number_perfect(int n);
+
+    /**
+     * Funkcja sprawdza czy ciąg znaków jest palindromem.
+     * @param str - Ciąg znaków.
+     * @return Wartość logiczna true jeśli ciąg znaków jest palindromem, w przeciwnym wypadku false.
+     */
+    bool Is_palindrome(const std::string &str);
+
+    /**
+     * Funkcja sprawdza czy podany numer pesel jest poprawny.
+     * @param pesel - Numer pesel.
+     * @return Wartość logiczna true jeśli pesel jest poprawny, w przeciwnym wypadku false.
+     */
+    bool Is_pesel_valid(const std::string &pesel);
 }
 
+namespace Converters {
+    /**
+     * Funkcja konwertuje liczbę zapisaną w systemie dziesiętnym na system dwójkowy.
+     * @param n - Liczba zapisana w systemie dziesiętnym.
+     * @return Liczba zapisana w systemie dwójkowym.
+     */
+    std::string Dec_to_bin(int n);
+
+    /**
+     * Funkcja konwertuje liczbę zapisaną w systemie dwójkowym na system dziesiętny.
+     * @param str - Liczba zapisana w systemie dwójkowym.
+     * @return Liczba zapisana w systemie dziesiętnym.
+     */
+    int Bin_to_dec(const std::string &str);
+
+    /**
+     * Funkcja konwertuje liczbę zapisaną w systemie dziesiętnym na system szesnastkowy.
+     * @param n - Liczba zapisana w systemie dziesiętnym.
+     * @return Liczba zapisana w systemie szesnastkowym.
+     */
+    std::string Dec_to_hex(int n);
+
+    /**
+     * Funkcja konwertuje liczbę zapisaną w systemie szesnastkowym na system dziesiętny.
+     * @param str - Liczba zapisana w systemie szesnastkowym.
+     * @return Liczba zapisana w systemie dziesiętnym.
+     */
+    int Hex_to_dec(const std::string &str);
+}
