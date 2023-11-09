@@ -152,18 +152,12 @@ namespace Converters {
 
         for (int i = (int) str.length() - 1; i >= 0; i--) {
             char ch = (char) std::toupper(str[i]);
-            int value;
+            int value = 0;
 
             if (std::isdigit(ch)) {
                 value = ch - '0';
             } else if (ch >= 'A' && ch <= 'F') {
                 value = 10 + (ch - 'A');
-            } else {
-                /*
-                 * Jeśli użyto niepoprawnego znaku dodaj do
-                 * wyniku 0.
-                 */
-                value = 0;
             }
 
             result += value * power;
