@@ -5,6 +5,11 @@
 
 namespace zadania_25_10_2023 {
     void zad_2() {
+        /*
+         * Źródło zaczerpniętych informacji
+         * Rozwinięcie Laplace’a - metoda na obliczenie wyznacznika - https://www.youtube.com/watch?v=P5LJrOn6E9s&t=343s
+         *
+         */
         using std::cout, std::cin, std::endl, std::vector;
         using namespace Matrix_tools;
         int n;
