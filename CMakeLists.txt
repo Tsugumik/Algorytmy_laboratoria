@@ -3,7 +3,7 @@ project(Algorytmy_laboratoria)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(ALG_18_10_2023 main.cpp
+add_executable(Algorytmy_laboratoria main.cpp
         zadania.h
         zadania_18_10_2023/zad_1.cpp
         zadania_18_10_2023/zad_2.cpp
