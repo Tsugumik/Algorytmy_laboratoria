@@ -1,0 +1,5 @@
+language = "CPlusPlus"
+onBoot = "cmake CMakeLists.txt; make"
+compile = "cmake CMakeLists.txt; make"
+run = "./Algorytmy_laboratoria"
+entrypoint = "main.cpp"
