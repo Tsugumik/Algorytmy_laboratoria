@@ -1,4 +1,3 @@
-#include <cmath>
 #include "Math_functions.h"
 #include "Array_tools.h"
 

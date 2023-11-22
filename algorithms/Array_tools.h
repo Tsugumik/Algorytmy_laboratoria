@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+#include <cmath>
 
 namespace Array_tools {
     /**
@@ -92,6 +94,20 @@ namespace Array_tools {
      * @return Ilość elementów podzielnych przez 3 w tablicy.
      */
     int Count_divisible_by_3(const int arr[], int size);
+
+    /**
+     * Wyświetla po kolei wszystkie elementy tablicy oddzielone spacją.
+     * @tparam T - Typ danych w tablicy.
+     * @param arr - Adres tablicy.
+     * @param size - Rozmiar tablicy.
+     */
+    template<typename T>
+    void Print_arr(const T arr[], unsigned int size) {
+        for(unsigned int i=0; i<size; i++) {
+            std::cout << arr[i] << " ";
+        }
+        std::cout << "\n";
+    }
 }
 
 
