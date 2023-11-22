@@ -22,7 +22,7 @@ namespace Sorting {
     void Selection_sort(int tab[], unsigned int size);
 
     /**
-     *
+     * Sortuje podaną tablicę za pomocą algorytmu szybkiego sortowania.
      * @param tab - Adres tablicy.
      * @param left - Indeks lewego elementu
      * @param right - Indeks prawego elementu
