@@ -3,6 +3,22 @@ project(Algorytmy_laboratoria)
 
 set(CMAKE_CXX_STANDARD 17)
 
+enable_testing()
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
+
+add_executable(Tests
+        algorithms/Sorting.cpp
+        algorithms/Array_tools.cpp
+        algorithms/Math_functions.cpp
+        zadania_22_11_2023/zad_1_test.cpp
+        zadania_22_11_2023/zad_2_test.cpp
+        gtest_main.cpp
+)
+
+target_link_libraries(Tests GTest::GTest GTest::Main)
+add_test(NAME Tests COMMAND Tests)
+
 add_executable(Algorytmy_laboratoria main.cpp
         zadania.h
         zadania_18_10_2023/zad_1.cpp
@@ -35,4 +51,7 @@ add_executable(Algorytmy_laboratoria main.cpp
         algorithms/Sorting.cpp
         algorithms/Sorting.h
         zadania_15_11_2023/zad_1.cpp
-        zadania_15_11_2023/zad_2.cpp)
+        zadania_15_11_2023/zad_2.cpp
+        zadania_22_11_2023/zad_1.cpp
+        zadania_22_11_2023/zad_2.cpp
+)
