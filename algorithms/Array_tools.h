@@ -109,6 +109,14 @@ namespace Array_tools {
         }
         std::cout << "\n";
     }
+
+    /**
+     * Funkcja sprawdza czy dana tablica jest posortowana.
+     * @param arr - Adres tablicy.
+     * @param size - Rozmiar tablicy.
+     * @return Wartość logiczna true jeśli tablica jest posortowana, w przeciwnym razie false.
+     */
+    bool Is_sorted(const int arr[], unsigned int size);
 }
 
 
