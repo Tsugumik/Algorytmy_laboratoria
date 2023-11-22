@@ -7,6 +7,7 @@ Status rozwiązywania zadań ze wszystkich laboratoriów:
 - LAB2 (18.10.2023) - 7/7 - **100%**
 - LAB3 (25.10.2023) - 7/7 - **100%**
 - LAB4 (08.11.2023) - 6/6 - **100%**
+- LAB5 (15.11.2023) - 2/2 - **100%**
 
 ## Instrukcja uruchamiania poszczególnych zadań:
 
