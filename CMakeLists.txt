@@ -3,21 +3,26 @@ project(Algorytmy_laboratoria)
 
 set(CMAKE_CXX_STANDARD 17)
 
-enable_testing()
-find_package(GTest REQUIRED)
-include_directories(${GTEST_INCLUDE_DIRS})
+find_package(GTest QUIET)
+if (GTEST_FOUND)
+    message(STATUS "GTest found, compiling tests.")
+    enable_testing()
+    include_directories(${GTEST_INCLUDE_DIRS})
 
-add_executable(Tests
-        algorithms/Sorting.cpp
-        algorithms/Array_tools.cpp
-        algorithms/Math_functions.cpp
-        zadania_22_11_2023/zad_1_test.cpp
-        zadania_22_11_2023/zad_2_test.cpp
-        gtest_main.cpp
-)
+    add_executable(Tests
+            algorithms/Sorting.cpp
+            algorithms/Array_tools.cpp
+            algorithms/Math_functions.cpp
+            zadania_22_11_2023/zad_1_test.cpp
+            zadania_22_11_2023/zad_2_test.cpp
+            gtest_main.cpp
+    )
 
-target_link_libraries(Tests GTest::GTest GTest::Main)
-add_test(NAME Tests COMMAND Tests)
+    target_link_libraries(Tests GTest::GTest GTest::Main)
+    add_test(NAME Tests COMMAND Tests)
+else ()
+    message(WARNING "GTest not found, tests will not be compiled.")
+endif ()
 
 add_executable(Algorytmy_laboratoria main.cpp
         zadania.h
