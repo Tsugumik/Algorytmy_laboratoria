@@ -31,4 +31,8 @@ add_executable(Algorytmy_laboratoria main.cpp
         zadania_8_11_2023/zad_3.cpp
         zadania_8_11_2023/zad_4.cpp
         zadania_8_11_2023/zad_5.cpp
-        zadania_8_11_2023/zad_6.cpp)
+        zadania_8_11_2023/zad_6.cpp
+        algorithms/Sorting.cpp
+        algorithms/Sorting.h
+        zadania_15_11_2023/zad_1.cpp
+        zadania_15_11_2023/zad_2.cpp)
