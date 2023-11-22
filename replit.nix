@@ -1,6 +1,6 @@
 { pkgs }: {
     deps = [
-        pkgs.cmake,
-        gtest
+        pkgs.cmake
+        pkgs.gtest
     ];
 }
