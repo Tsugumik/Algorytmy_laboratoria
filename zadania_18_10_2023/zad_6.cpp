@@ -11,12 +11,12 @@ namespace zadania_18_10_2023 {
         cout << "Podaj rozmiar tablicy:";
         cin >> size;
 
-        int* arr = new int[size];
+        int *arr = new int[size];
 
         cout << "Przyklad: 7 8 5 5" << endl;
         cout << "Wpisz wszystkie elementy tablicy oddzielone spacjami i zatwierdz enterem:";
 
-        for(int i=0; i<size; i++) {
+        for (int i = 0; i < size; i++) {
             cin >> arr[i];
         }
 

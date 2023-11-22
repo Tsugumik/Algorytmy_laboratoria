@@ -1,4 +1,5 @@
 #pragma once
+
 #include <iostream>
 #include <cmath>
 
@@ -103,7 +104,7 @@ namespace Array_tools {
      */
     template<typename T>
     void Print_arr(const T arr[], unsigned int size) {
-        for(unsigned int i=0; i<size; i++) {
+        for (unsigned int i = 0; i < size; i++) {
             std::cout << arr[i] << " ";
         }
         std::cout << "\n";

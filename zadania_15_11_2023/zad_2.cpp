@@ -3,8 +3,8 @@
 #include "../zadania.h"
 
 void zadania_15_11_2023::zad_2() {
-    int arr[10] {
-            10,9,8,7,6,5,4,3,2,1
+    int arr[10]{
+            10, 9, 8, 7, 6, 5, 4, 3, 2, 1
     };
 
     std::cout << "Przed sortowaniem:\n";
