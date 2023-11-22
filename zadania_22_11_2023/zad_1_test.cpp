@@ -1,4 +1,3 @@
-#pragma once
 #include "../algorithms/Array_tools.h"
 #include "../algorithms/Sorting.h"
 #include "gtest/gtest.h"
