@@ -25,16 +25,22 @@ int main() {
 ```
 
 ## Projekt można uruchomić na Replit
+
 [![Run on Repl.it](https://replit.com/badge/github/Tsugumik/Algorytmy_laboratoria)](https://replit.com/new/github/Tsugumik/Algorytmy_laboratoria)
 
 ### Uruchamianie testów na Replit
-Jeśli podczas kompilacji projektu nie pojawią się błędy lub inne ostrzeżenia dotyczące GoogleTest można przystąpić do uruchomienia testów.
+
+Jeśli podczas kompilacji projektu nie pojawią się błędy lub inne ostrzeżenia dotyczące GoogleTest można przystąpić do
+uruchomienia testów.
 
 Aby uruchomić test należy (po skompilowaniu projektu) przejść do zakładki shell i wykonać polecenie:
+
 ```shell
 ./Tests
 ```
-Jeśli pojawi się informacja, że dany plik nie istnieje, oznacza to, że kompilacja testów z jakiegoś powodu się nie powiodła. Szczegółowe informacje będą zawarte w logach CMake'a.
+
+Jeśli pojawi się informacja, że dany plik nie istnieje, oznacza to, że kompilacja testów z jakiegoś powodu się nie
+powiodła. Szczegółowe informacje będą zawarte w logach CMake'a.
 
 ## Instrukcja budowania i uruchamiania na Linuksie
 

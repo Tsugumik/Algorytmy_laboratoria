@@ -3,8 +3,8 @@
 #include "../zadania.h"
 
 void zadania_22_11_2023::zad_1() {
-    int tab[8] {
-        7,6,1,2,5,4,8,9
+    int tab[8]{
+            7, 6, 1, 2, 5, 4, 8, 9
     };
 
     std::cout << "(Sortowanie przez wybor) Przed sortowaniem:\n";

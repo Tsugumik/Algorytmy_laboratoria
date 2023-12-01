@@ -68,7 +68,6 @@ namespace Array_tools {
         double diff_squares_avg = Avg(diff_squares, size);
 
         return diff_squares_avg;
-
     }
 
     int Get_n_element(const int arr[], int n) {

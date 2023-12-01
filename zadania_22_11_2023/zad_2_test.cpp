@@ -12,7 +12,7 @@ TEST(QuickSortTest, SingleElementArray) {
 
 // Test dla tablicy już posortowanej
 TEST(QuickSortTest, SortedArray) {
-    int arr[5] {
+    int arr[5]{
             1, 2, 3, 4, 5
     };
     Sorting::Quick_sort(arr, 0, 4);
@@ -21,14 +21,14 @@ TEST(QuickSortTest, SortedArray) {
 
 // Test dla tablicy posortowanej malejąco
 TEST(QuickSortTest, ReverseSortedArray) {
-    int arr[5] {5, 4, 3, 2, 1};
+    int arr[5]{5, 4, 3, 2, 1};
     Sorting::Quick_sort(arr, 0, 4);
     ASSERT_TRUE(Array_tools::Is_sorted(arr, 5));
 }
 
 // Test dla losowej tablicy
 TEST(QuickSortTest, RandomArray) {
-    int arr[11] {3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5};
+    int arr[11]{3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5};
     Sorting::Quick_sort(arr, 0, 10);
     ASSERT_TRUE(Array_tools::Is_sorted(arr, 11));
 }
