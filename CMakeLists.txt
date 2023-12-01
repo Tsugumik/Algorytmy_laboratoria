@@ -16,6 +16,7 @@ if (GTEST_FOUND)
             zadania_22_11_2023/zad_1_test.cpp
             zadania_22_11_2023/zad_2_test.cpp
             gtest_main.cpp
+            zadania_29_11_2023/zad_1_test.cpp
     )
 
     target_link_libraries(Tests GTest::GTest GTest::Main)
@@ -59,4 +60,5 @@ add_executable(Algorytmy_laboratoria main.cpp
         zadania_15_11_2023/zad_2.cpp
         zadania_22_11_2023/zad_1.cpp
         zadania_22_11_2023/zad_2.cpp
+        zadania_29_11_2023/zad_1.cpp
 )
