@@ -9,6 +9,7 @@ Status rozwiązywania zadań ze wszystkich laboratoriów:
 - LAB4 (08.11.2023) - 6/6 - **100%**
 - LAB5 (15.11.2023) - 2/2 - **100%**
 - LAB6 (22.11.2023) - 2/2 - **100%**
+- LAB7 (29.11.2023) - 1/1 - **100%**
 
 ## Instrukcja uruchamiania poszczególnych zadań:
 
