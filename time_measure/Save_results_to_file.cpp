@@ -1,7 +1,3 @@
-//
-// Created by drozd on 11.12.2023.
-//
-
 #include "Save_results_to_file.h"
 
 void

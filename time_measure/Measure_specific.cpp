@@ -1,7 +1,3 @@
-//
-// Created by drozd on 11.12.2023.
-//
-
 #include "Measure_specific.h"
 
 std::vector<unsigned int>
