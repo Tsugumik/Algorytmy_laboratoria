@@ -71,4 +71,5 @@ add_executable(Algorytmy_laboratoria main.cpp
         time_measure/Measure_specific.h
         time_measure/Save_results_to_file.cpp
         time_measure/Save_results_to_file.h
+        zadania_11_12_2023/zad_1.cpp
 )
