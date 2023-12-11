@@ -61,4 +61,14 @@ add_executable(Algorytmy_laboratoria main.cpp
         zadania_22_11_2023/zad_1.cpp
         zadania_22_11_2023/zad_2.cpp
         zadania_29_11_2023/zad_1.cpp
+        time_measure/Gen_time_test_data.cpp
+        time_measure/Gen_time_test_data.h
+        time_measure/Sorting_time_measure.cpp
+        time_measure/Sorting_time_measure.h
+        zadania_11_12_2023/zad_2.cpp
+        zadania_11_12_2023/zad_2.cpp
+        time_measure/Measure_specific.cpp
+        time_measure/Measure_specific.h
+        time_measure/Save_results_to_file.cpp
+        time_measure/Save_results_to_file.h
 )
