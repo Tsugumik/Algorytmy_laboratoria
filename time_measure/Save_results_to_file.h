@@ -1,4 +1,5 @@
 #pragma once
+
 #include <vector>
 #include <fstream>
 #include "Sorting_time_measure.h"
@@ -14,4 +15,6 @@
  * @param sort_mode Tryb sortowania (Sorting_mode enum).
  * @param algorithm Wybrany algorytm sortowania (Sorting_algorithms enum).
  */
-void Save_results_to_file(const std::vector<unsigned int>& results, const std::string& results_path, Sorting_mode sort_mode, Sorting_algorithms algorithm);
+void
+Save_results_to_file(const std::vector<unsigned int> &results, const std::string &results_path, Sorting_mode sort_mode,
+                     Sorting_algorithms algorithm);

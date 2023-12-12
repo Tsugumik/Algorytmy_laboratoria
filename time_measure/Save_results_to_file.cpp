@@ -6,23 +6,23 @@ Save_results_to_file(const std::vector<unsigned int> &results, const std::string
     std::string mode;
     std::string alg_name;
 
-    if(sort_mode == Sorting_mode::OPTIMISTIC) {
+    if (sort_mode == Sorting_mode::OPTIMISTIC) {
         mode = "optimistic";
-    } else if(sort_mode == Sorting_mode::RANDOM) {
+    } else if (sort_mode == Sorting_mode::RANDOM) {
         mode = "random";
-    } else if(sort_mode == Sorting_mode::PESIMISTIC) {
+    } else if (sort_mode == Sorting_mode::PESIMISTIC) {
         mode = "pesimistic";
     }
 
-    if(algorithm == Sorting_algorithms::BUBBLE) {
+    if (algorithm == Sorting_algorithms::BUBBLE) {
         alg_name = "bubble";
-    } else if(algorithm == Sorting_algorithms::INSERTION) {
+    } else if (algorithm == Sorting_algorithms::INSERTION) {
         alg_name = "insertion";
-    } else if(algorithm == Sorting_algorithms::SELECTION) {
+    } else if (algorithm == Sorting_algorithms::SELECTION) {
         alg_name = "selection";
-    } else if(algorithm == Sorting_algorithms::QUICK) {
+    } else if (algorithm == Sorting_algorithms::QUICK) {
         alg_name = "quick";
-    } else if(algorithm == Sorting_algorithms::MERGE) {
+    } else if (algorithm == Sorting_algorithms::MERGE) {
         alg_name = "merge";
     }
 
@@ -36,7 +36,7 @@ Save_results_to_file(const std::vector<unsigned int> &results, const std::string
         // Dodaj nową linię po co piątej liczbie
         if ((i + 1) % 5 == 0 && i < results.size() - 1) {
             file << '\n';
-        } else if(i < results.size() - 1) {
+        } else if (i < results.size() - 1) {
             file << '\t';
         }
     }

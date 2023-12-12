@@ -1,4 +1,5 @@
 #pragma once
+
 #include <string>
 #include <fstream>
 #include <cstdlib>
@@ -13,4 +14,4 @@
  * @param path Ścieżka do katalogu, w którym zostaną zapisane pliki z danymi testowymi.
  *             Funkcja utworzy pliki "ascending500.txt", "descending500.txt" i "random500.txt".
  */
-void Gen_time_test_data(const std::string& path);
+void Gen_time_test_data(const std::string &path);
