@@ -98,9 +98,9 @@ public:
             delete this->_lastElementAddress;
             searchAddress->setNextEntityAddress(nullptr);
             _lastElementAddress = searchAddress;
-
-            this->_size -= 1;
         }
+
+        this->_size -= 1;
     }
 
 };
