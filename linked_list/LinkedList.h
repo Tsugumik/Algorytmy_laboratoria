@@ -1,23 +1,51 @@
 #pragma once
 #include <stdexcept>
-#include "Linked_list_node.h"
+#include "LinkedListNode.h"
 
+/**
+ * @brief Klasa szablonowa reprezentująca listę powiązaną.
+ *
+ * Klasa ta korzysta z LinkedListNode jako węzła.
+ *
+ * @tparam T - Typ elementów przechowywanych w liście.
+ */
 template<typename T>
-class Linked_list {
+class LinkedList {
 private:
-    unsigned int _size = 0;
-    Linked_list_node<T> *_firstElementAddress = nullptr;
-    Linked_list_node<T> *_lastElementAddress = nullptr;
+    unsigned int _size; /**< Rozmiar listy. */
+    LinkedListNode<T> *_firstElementAddress; /**< Wskaźnik do pierwszego węzła. */
+    LinkedListNode<T> *_lastElementAddress; /**< Wskaźnik do ostatniego węzła. */
 public:
-    ~Linked_list() {
-        Linked_list_node<T> *nextElementAddress = this->_firstElementAddress;
+    /**
+     * @brief Konstruktor bezargumentowy.
+     *
+     * Inicjuje listę jako pustą, ustawiając rozmiar na 0 oraz wskaźniki pierwszego i ostatniego elementu na nullptr.
+     */
+    LinkedList() : _size(0), _firstElementAddress(nullptr), _lastElementAddress(nullptr) { }
+
+    /**
+     * @brief Destruktor.
+     *
+     * Usuwa wszystkie elementy listy przy zwalnianiu pamięci.
+     */
+    ~LinkedList() {
+        LinkedListNode<T> *nextElementAddress = this->_firstElementAddress;
         for (int i = 0; i < this->_size; i++) {
-            Linked_list_node<T> *tmp = nextElementAddress->getNextEntityAddress();
+            LinkedListNode<T> *tmp = nextElementAddress->getNextEntityAddress();
             delete nextElementAddress;
             nextElementAddress = tmp;
         }
     }
 
+    /**
+     * @brief Operator indeksowania.
+     *
+     * Pozwala na dostęp do elementu listy o podanym indeksie.
+     * Rzuca wyjątek std::out_of_range, jeśli indeks jest poza zakresem.
+     *
+     * @param n - Indeks elementu listy.
+     * @return Referencja do wartości elementu listy.
+     */
     T &operator[](unsigned int n) {
         if(n >= this->_size) {
             throw std::out_of_range("Index out of range");
@@ -28,24 +56,26 @@ public:
         } else if (n == this->_size - 1) {
             return _lastElementAddress->getRef();
         } else {
-            Linked_list_node<T> *searchAddress = _firstElementAddress->getNextEntityAddress();
+            LinkedListNode<T> *searchAddress = _firstElementAddress->getNextEntityAddress();
             for (int i = 1; i <= n; i++) {
                 if (i == n) {
                     return searchAddress->getRef();
                 }
 
-                Linked_list_node<T> *tmpAddress = searchAddress->getNextEntityAddress();
+                LinkedListNode<T> *tmpAddress = searchAddress->getNextEntityAddress();
                 searchAddress = tmpAddress->getNextEntityAddress();
             }
         }
     }
 
+
     /**
-     * Dodaje element na końcu listy powiązanej
-     * @param value - Nowy element, który zostanie dodany.
+     * @brief Dodaje nowy element na koniec listy.
+     *
+     * @param value - Wartość do dodania.
      */
     void add(const T& value) {
-        auto *tmp = new Linked_list_node<T>(value);
+        auto *tmp = new LinkedListNode<T>(value);
 
         if (this->_size > 0) {
             _lastElementAddress->setNextEntityAddress(tmp);
@@ -59,11 +89,12 @@ public:
     }
 
     /**
-     * Dodaje nowy element na początku listy powiązanej.
-     * @param value - Nowy element, który zostanie dodany.
+     * @brief Dodaje nowy element na początek listy.
+     *
+     * @param value - Wartość do dodania.
      */
     void push(const T& value) {
-        auto *tmp = new Linked_list_node<T>(value);
+        auto *tmp = new LinkedListNode<T>(value);
 
         if (this->_size > 0) {
             tmp->setNextEntityAddress(_firstElementAddress);
@@ -77,7 +108,9 @@ public:
     }
 
     /**
-     * Usuwa ostatni element z listy powiązanej.
+     * @brief Usuwa ostatni element z listy.
+     *
+     * Rzuca wyjątek std::out_of_range, jeśli lista jest pusta.
      */
     void pop() {
         if(this->_size == 0) {
@@ -89,9 +122,9 @@ public:
             delete this->_lastElementAddress;
             this->_lastElementAddress = this->_firstElementAddress;
         } else {
-            Linked_list_node<T> *searchAddress = _firstElementAddress->getNextEntityAddress();
+            LinkedListNode<T> *searchAddress = _firstElementAddress->getNextEntityAddress();
             for(int i=1; i < this->_size - 2; i++) {
-                Linked_list_node<T> *tmp = searchAddress->getNextEntityAddress();
+                LinkedListNode<T> *tmp = searchAddress->getNextEntityAddress();
                 searchAddress = tmp;
             }
 
