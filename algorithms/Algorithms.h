@@ -1,4 +1,7 @@
 #pragma once
+#include <string>
+#include "../stack/Stack.h"
+#include <cctype>
 
 namespace Algorithms {
     /**
@@ -77,6 +80,13 @@ namespace Algorithms {
      * @return Wartość logiczna true jeśli pesel jest poprawny, w przeciwnym wypadku false.
      */
     bool Is_pesel_valid(const std::string &pesel);
+
+    /**
+     * Oblicza wartość wyrażenia podanego w ONP
+     * @param str - Wyrażenie podane w ONP.
+     * @return Wynik.
+     */
+    double Calculate_ONP(const std::string &str);
 }
 
 namespace Converters {
