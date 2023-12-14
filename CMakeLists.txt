@@ -74,6 +74,6 @@ add_executable(Algorytmy_laboratoria main.cpp
         zadania_11_12_2023/zad_1.cpp
         stack/Stack.h
         stack/Stack.h
-        linked_list/Linked_list.h
-        linked_list/Linked_list_node.h
+        linked_list/LinkedList.h
+        linked_list/LinkedListNode.h
 )
