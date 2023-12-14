@@ -1,4 +1,5 @@
 #pragma once
+
 #include <string>
 #include "../stack/Stack.h"
 #include <cctype>

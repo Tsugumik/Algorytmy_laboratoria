@@ -19,7 +19,7 @@ public:
      *
      * Inicjuje _value wartością domyślną dla typu T, a _nextEntityAddress ustawia na nullptr.
      */
-    LinkedListNode() : _value(T()), _nextEntityAddress(nullptr) { }
+    LinkedListNode() : _value(T()), _nextEntityAddress(nullptr) {}
 
     /**
      * @brief Konstruktor jednoargumentowy.
@@ -28,7 +28,7 @@ public:
      *
      * @param value - Wartość do ustawienia w węźle.
      */
-    explicit LinkedListNode(const T& value) : _value(value), _nextEntityAddress(nullptr) { }
+    explicit LinkedListNode(const T &value) : _value(value), _nextEntityAddress(nullptr) {}
 
     /**
      * @brief Pobiera referencję do wartości węzła.
@@ -46,7 +46,7 @@ public:
      *
      * @param value - Nowa wartość do ustawienia w węźle.
      */
-    void set(const T& value) {
+    void set(const T &value) {
         this->_value = value;
     }
 

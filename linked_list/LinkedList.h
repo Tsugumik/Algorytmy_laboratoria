@@ -1,4 +1,5 @@
 #pragma once
+
 #include <stdexcept>
 #include "LinkedListNode.h"
 
@@ -21,7 +22,7 @@ public:
      *
      * Inicjuje listę jako pustą, ustawiając rozmiar na 0 oraz wskaźniki pierwszego i ostatniego elementu na nullptr.
      */
-    LinkedList() : _size(0), _firstElementAddress(nullptr), _lastElementAddress(nullptr) { }
+    LinkedList() : _size(0), _firstElementAddress(nullptr), _lastElementAddress(nullptr) {}
 
     /**
      * @brief Destruktor.
@@ -47,7 +48,7 @@ public:
      * @return Referencja do wartości elementu listy.
      */
     T &operator[](unsigned int n) {
-        if(n >= this->_size) {
+        if (n >= this->_size) {
             throw std::out_of_range("Index out of range");
         }
 
@@ -74,7 +75,7 @@ public:
      *
      * @param value - Wartość do dodania.
      */
-    void add(const T& value) {
+    void add(const T &value) {
         auto *tmp = new LinkedListNode<T>(value);
 
         if (this->_size > 0) {
@@ -93,7 +94,7 @@ public:
      *
      * @param value - Wartość do dodania.
      */
-    void push(const T& value) {
+    void push(const T &value) {
         auto *tmp = new LinkedListNode<T>(value);
 
         if (this->_size > 0) {
@@ -113,17 +114,17 @@ public:
      * Rzuca wyjątek std::out_of_range, jeśli lista jest pusta.
      */
     void pop() {
-        if(this->_size == 0) {
+        if (this->_size == 0) {
             throw std::out_of_range("Linked list is empty");
-        } else if(this->_size == 1) {
+        } else if (this->_size == 1) {
             delete this->_firstElementAddress;
             this->_firstElementAddress = nullptr;
-        } else if(this->_size == 2) {
+        } else if (this->_size == 2) {
             delete this->_lastElementAddress;
             this->_lastElementAddress = this->_firstElementAddress;
         } else {
             LinkedListNode<T> *searchAddress = _firstElementAddress->getNextEntityAddress();
-            for(int i=1; i < this->_size - 2; i++) {
+            for (int i = 1; i < this->_size - 2; i++) {
                 LinkedListNode<T> *tmp = searchAddress->getNextEntityAddress();
                 searchAddress = tmp;
             }

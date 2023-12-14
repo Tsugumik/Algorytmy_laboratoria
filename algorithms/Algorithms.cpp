@@ -100,21 +100,21 @@ namespace Algorithms {
 
         std::string symbol;
 
-        for(int i=0; i <= str.size(); i++) {
-            if(str[i] == ' ' || i == str.size()) {
-                if(!symbol.empty()) {
+        for (int i = 0; i <= str.size(); i++) {
+            if (str[i] == ' ' || i == str.size()) {
+                if (!symbol.empty()) {
                     // Sprawdzanie czy symbol jest liczbą
                     try {
                         size_t pos;
                         double liczba = std::stod(symbol, &pos);
-                        if(pos == symbol.size()) {
+                        if (pos == symbol.size()) {
                             // Symbol jest liczbą, odłóż na stos
                             stack.push(liczba);
                         }
-                    } catch(const std::exception& e) {
+                    } catch (const std::exception &e) {
                         // Symbol potencjalnie nie jest liczbą, ponieważ przy próbie konwersji otrzymaliśmy wyjątek
-                        if(symbol.size() == 1) {
-                            if(stack.size() < 2) {
+                        if (symbol.size() == 1) {
+                            if (stack.size() < 2) {
                                 throw std::runtime_error("Zbyt malo elementow na stosie do wykonania operacji");
                             }
                             double a = stack.pop();

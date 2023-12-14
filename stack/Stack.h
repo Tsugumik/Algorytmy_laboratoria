@@ -1,4 +1,5 @@
 #pragma once
+
 #include <stdexcept>
 #include "../linked_list/LinkedList.h"
 
@@ -21,14 +22,14 @@ public:
      *
      * Inicjuje początkowy rozmiar stosu.
      */
-    Stack() : _size(0) { }
+    Stack() : _size(0) {}
 
     /**
      * @brief Dodaje nowy element na sczyt stosu.
      *
      * @param element - Wartość do dodania.
      */
-    void push(const T& element) {
+    void push(const T &element) {
         this->_linkedList.add(element);
         this->_size++;
     }
@@ -41,7 +42,7 @@ public:
      * @return Skopiowana wartość usuwanego elementu.
      */
     T pop() {
-        if(this->_size < 1) throw std::underflow_error("Stack underflow: attempting to pop from an empty stack");
+        if (this->_size < 1) throw std::underflow_error("Stack underflow: attempting to pop from an empty stack");
         T copy = _linkedList[this->_size - 1];
         _linkedList.pop();
         this->_size -= 1;
@@ -55,8 +56,8 @@ public:
      *
      * @return Referencja do wartości na szczycie stosu.
      */
-    const T& top() {
-        if(this->_size < 1) throw std::underflow_error("Stack underflow: attempting to access top of an empty stack");
+    const T &top() {
+        if (this->_size < 1) throw std::underflow_error("Stack underflow: attempting to access top of an empty stack");
         return this->_linkedList[this->_size - 1];
     }
 
