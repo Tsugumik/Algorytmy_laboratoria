@@ -4,6 +4,7 @@
 #include "../zadania.h"
 
 void zadania_13_12_2023::zad_2() {
+    std::cout << "Podaj wyrazenie ONP:";
     std::string onp;
     std::getline(std::cin, onp);
 
