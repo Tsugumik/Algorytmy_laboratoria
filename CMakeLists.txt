@@ -75,4 +75,5 @@ add_executable(Algorytmy_laboratoria main.cpp
         stack/Stack.h
         linked_list/LinkedList.h
         linked_list/LinkedListNode.h
+        zadania_13_12_2023/zad_2.cpp
 )

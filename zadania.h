@@ -67,3 +67,7 @@ namespace zadania_11_12_2023 {
 
     void zad_2();
 }
+
+namespace zadania_13_12_2023 {
+    void zad_2();
+}
