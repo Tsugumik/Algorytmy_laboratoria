@@ -79,4 +79,6 @@ add_executable(Algorytmy_laboratoria main.cpp
         queue/Queue.h
         queue/PriorityQueue.h
         queue/PriorityQueueNode.h
+        zadania_10_01_2024/zad_1.cpp
+        zadania_10_01_2024/zad_2.cpp
 )
