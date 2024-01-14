@@ -11,5 +11,5 @@ void zadania_10_01_2024::zad_2() {
     kolejkaPriorytetowa.add("Robert", 5);
     kolejkaPriorytetowa.add("Nikodem", -1);
 
-    for(int i=0; i<4; i++) std::cout << kolejkaPriorytetowa.pop() << std::endl;
+    for (int i = 0; i < 4; i++) std::cout << kolejkaPriorytetowa.pop() << std::endl;
 }

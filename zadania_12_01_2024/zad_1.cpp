@@ -8,7 +8,7 @@
 void zadania_12_01_2024::zad_1() {
     using std::cout, std::cin, std::string, std::cerr;
     unsigned char choice;
-    IDataStructure<string>* structure = nullptr;
+    IDataStructure<string> *structure = nullptr;
 
     do {
         cout << "Menu:\n";
@@ -40,7 +40,7 @@ void zadania_12_01_2024::zad_1() {
         }
 
         unsigned char choice_sec;
-        if(structure != nullptr) {
+        if (structure != nullptr) {
             cout << "\nOperacje na strukturze danych:\n";
             cout << "1. Dodaj element\n";
             cout << "2. Usun element\n";
@@ -57,7 +57,7 @@ void zadania_12_01_2024::zad_1() {
                 cin >> choice_sec;
 
                 string value;
-                switch(choice_sec) {
+                switch (choice_sec) {
                     case '1':
                         cout << "Podaj wartosc do dodania: ";
                         cin >> value;
@@ -67,21 +67,21 @@ void zadania_12_01_2024::zad_1() {
                         try {
                             structure->pop();
                             cout << "Element usuniety.\n";
-                        } catch (const std::underflow_error& e) {
+                        } catch (const std::underflow_error &e) {
                             cerr << e.what() << '\n';
                         }
                         break;
                     case '3':
                         try {
                             cout << "Pierwszy element: " << structure->first() << '\n';
-                        } catch (const std::underflow_error& e) {
+                        } catch (const std::underflow_error &e) {
                             cerr << e.what() << '\n';
                         }
                         break;
                     case '4':
                         try {
                             cout << "Ostatni element: " << structure->last() << '\n';
-                        } catch (const std::underflow_error& e) {
+                        } catch (const std::underflow_error &e) {
                             cerr << e.what() << '\n';
                         }
                         break;
@@ -91,7 +91,7 @@ void zadania_12_01_2024::zad_1() {
                         cin >> index;
                         try {
                             cout << "Element o indeksie " << index << ": " << structure->getN(index) << '\n';
-                        } catch (const std::out_of_range& e) {
+                        } catch (const std::out_of_range &e) {
                             cerr << e.what() << '\n';
                         }
                         break;

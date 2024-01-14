@@ -11,5 +11,5 @@ void zadania_10_01_2024::zad_1() {
     kolejka.add("Robert");
     kolejka.add("Nikodem");
 
-    for(int i=0; i<4; i++) std::cout << kolejka.pop() << std::endl;
+    for (int i = 0; i < 4; i++) std::cout << kolejka.pop() << std::endl;
 }

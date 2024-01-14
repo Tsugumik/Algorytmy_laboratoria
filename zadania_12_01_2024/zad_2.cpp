@@ -10,9 +10,9 @@ void zadania_12_01_2024::zad_2() {
 
     Tower towerA, towerB, towerC;
 
-    for(int i = numberOfDisks; i > 0; i--) towerA.push(i);
+    for (int i = numberOfDisks; i > 0; i--) towerA.push(i);
 
-    while(towerC.size() != numberOfDisks) {
+    while (towerC.size() != numberOfDisks) {
         printTowers(towerA, towerB, towerC);
 
         char source, destination;
@@ -23,8 +23,8 @@ void zadania_12_01_2024::zad_2() {
         cout << "Podaj wierze na ktora chcesz przeniesc dysk (A, B, C): ";
         cin >> destination;
 
-        Tower* sourceTower;
-        Tower* destinationTower;
+        Tower *sourceTower;
+        Tower *destinationTower;
 
         switch (source) {
             case 'A':
@@ -56,7 +56,7 @@ void zadania_12_01_2024::zad_2() {
                 continue;
         }
 
-        if(!sourceTower->isEmpty() && (destinationTower->isEmpty() || sourceTower->top() < destinationTower->top())) {
+        if (!sourceTower->isEmpty() && (destinationTower->isEmpty() || sourceTower->top() < destinationTower->top())) {
             moveDisk(*sourceTower, *destinationTower);
         } else {
             cout << "Niepoprawny ruch!" << endl;

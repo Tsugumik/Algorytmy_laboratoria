@@ -28,28 +28,28 @@ int Tower::getN(unsigned int n) const {
     return tempStack.top();
 }
 
-void moveDisk(Tower& source, Tower& destination) {
+void moveDisk(Tower &source, Tower &destination) {
     destination.push(source.top());
     source.pop();
 }
 
 void printTowers(const Tower &towerA, const Tower &towerB, const Tower &towerC) {
     std::cout << "Wieża A: ";
-    for(int i = towerA.size(); i > 0; i--) {
+    for (int i = towerA.size(); i > 0; i--) {
         std::cout << towerA.getN(i) << " ";
     }
 
     std::cout << std::endl;
 
     std::cout << "Wieża B: ";
-    for(int i = towerB.size(); i > 0; i--) {
+    for (int i = towerB.size(); i > 0; i--) {
         std::cout << towerB.getN(i) << " ";
     }
 
     std::cout << std::endl;
 
     std::cout << "Wieża C: ";
-    for(int i = towerC.size(); i > 0; i--) {
+    for (int i = towerC.size(); i > 0; i--) {
         std::cout << towerC.getN(i) << " ";
     }
 
