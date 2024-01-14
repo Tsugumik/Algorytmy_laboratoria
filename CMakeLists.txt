@@ -76,4 +76,7 @@ add_executable(Algorytmy_laboratoria main.cpp
         linked_list/LinkedList.h
         linked_list/LinkedListNode.h
         zadania_13_12_2023/zad_2.cpp
+        queue/Queue.h
+        queue/PriorityQueue.h
+        queue/PriorityQueueNode.h
 )
