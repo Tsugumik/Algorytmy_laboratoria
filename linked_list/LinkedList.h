@@ -137,4 +137,129 @@ public:
         this->_size -= 1;
     }
 
+    /**
+     * @brief Zwraca rozmiar listy powiązanej.
+     * @return Rozmiar listy powiązanej.
+     */
+    unsigned int size() {
+        return this->_size;
+    }
+
+    /**
+     * @brief Zwraca wskaźnik do pierwszego elementu listy powiązanej.
+     * @return Wskaźnik do pierwszego elementu listy powiązanej.
+     */
+    LinkedListNode<T>* begin() {
+        return this->_firstElementAddress;
+    }
+
+    /**
+     * @brief Zwraca wskaźnik do ostatniego elementu listy powiązanej.
+     * @return Wskaźnik do ostatniego elementu listy powiązanej.
+     */
+    LinkedListNode<T>* end() {
+        return this->_lastElementAddress;
+    }
+
+    /**
+     * @brief Wstawia nowy element przed węzłem wskazywanym przez positionNode.
+     *
+     * @param value - Wartość do wstawienia.
+     * @param positionNode - Węzeł przed którym ma zostać wstawiona nowa wartość.
+     *
+     * @throw std::invalid_argument Jeśli positionNode jest nullptr.
+     * @throw std::out_of_range Jeśli nie znaleziono elementu w liście powiązanej.
+     */
+    void insert(const T& value, LinkedListNode<T> *positionNode) {
+        if(positionNode == nullptr) {
+            throw std::invalid_argument("Invalid argument: positionNode is nullptr");
+        }
+
+        if(positionNode == this->_firstElementAddress) {
+            auto newListNode = new LinkedListNode<T>(value);
+            newListNode->setNextEntityAddress(this->_firstElementAddress->getNextEntityAddress());
+            this->_firstElementAddress->setNextEntityAddress(newListNode);
+
+            if(this->_size == 1) {
+                this->_lastElementAddress = newListNode;
+            }
+        } else if(positionNode == this->_lastElementAddress) {
+            auto newListNode = new LinkedListNode<T>(value);
+            this->_lastElementAddress->setNextEntityAddress(newListNode);
+            this->_lastElementAddress = newListNode;
+        } else {
+            auto searchNode = this->_firstElementAddress->getNextEntityAddress();
+
+            while(searchNode != positionNode && searchNode != nullptr) {
+                searchNode = searchNode->getNextEntityAddress();
+            }
+
+            if(searchNode == nullptr) {
+                throw std::out_of_range("Element not found in the linked list");
+            }
+
+            auto newListNode = new LinkedListNode<T>(value);
+            newListNode->setNextEntityAddress(searchNode->getNextEntityAddress());
+            searchNode->setNextEntityAddress(newListNode);
+        }
+
+        this->_size += 1;
+    }
+    /**
+     * @brief Usuwa węzeł z listy powiązanej na podstawie podanego adresu.
+     *
+     * @param positionNode - Adres węzła do usunięcia.
+     *
+     * @throw std::out_of_range Jeśli lista jest pusta.
+     * @throw std::invalid_argument Jeśli positionNode jest nullptr.
+     * @throw std::underflow_error Jeśli nie znaleziono adresu w liście powiązanej.
+     */
+    void erease(LinkedListNode<T> *positionNode) {
+        if(this->_size == 0) {
+            throw std::out_of_range("Linked list is empty");
+        }
+
+        if(positionNode == nullptr) {
+            throw std::invalid_argument("Invalid argument: positionNode is nullptr");
+        }
+
+        if(positionNode == this->_firstElementAddress || positionNode == this->_lastElementAddress) {
+            // Jeśli pierwszy element jest zarówno ostatnim elementem
+            if(this->_firstElementAddress == this->_lastElementAddress) {
+                delete _firstElementAddress;
+                _firstElementAddress = nullptr;
+                _lastElementAddress = nullptr;
+            } else if(positionNode == this->_firstElementAddress) {
+                auto nextNode = _firstElementAddress->getNextEntityAddress();
+                delete _firstElementAddress;
+                _firstElementAddress = nextNode;
+            } else if(positionNode == this->_lastElementAddress){
+                auto searchNode = this->_firstElementAddress;
+
+                while(searchNode->getNextEntityAddress() != this->_lastElementAddress) {
+                    searchNode = searchNode->getNextEntityAddress();
+                }
+
+                delete _lastElementAddress;
+
+                searchNode->setNextEntityAddress(nullptr);
+                this->_lastElementAddress = searchNode;
+            }
+        } else {
+            auto searchNode = this->_firstElementAddress;
+
+            while(searchNode->getNextEntityAddress() != positionNode && searchNode != nullptr) {
+                searchNode = searchNode->getNextEntityAddress();
+            }
+
+            if(searchNode == nullptr) {
+                throw std::out_of_range("Element not found in the linked list");
+            }
+
+            searchNode->setNextEntityAddress(positionNode->getNextEntityAddress());
+            delete positionNode;
+        }
+
+        this->_size -= 1;
+    }
 };
