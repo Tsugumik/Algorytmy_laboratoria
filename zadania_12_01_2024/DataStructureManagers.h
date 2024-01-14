@@ -32,7 +32,7 @@ public:
     }
 
     /*
-     * Nie powinno się uzyskiwać do elementu stosu na jego spodzie
+     * Nie powinno się uzyskiwać elementu stosu na jego spodzie
      * dlatego w tym przypadku funkcja zwraca to samo co first()
      */
     T& last() override {
