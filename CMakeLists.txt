@@ -81,4 +81,10 @@ add_executable(Algorytmy_laboratoria main.cpp
         queue/PriorityQueueNode.h
         zadania_10_01_2024/zad_1.cpp
         zadania_10_01_2024/zad_2.cpp
+        zadania_12_01_2024/zad_1.cpp
+        zadania_12_01_2024/IDataStructure.h
+        zadania_12_01_2024/DataStructureManagers.h
+        zadania_12_01_2024/zad_2.cpp
+        zadania_12_01_2024/HanoiTower.h
+        zadania_12_01_2024/HanoiTower.cpp
 )
