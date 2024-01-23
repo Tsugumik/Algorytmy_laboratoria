@@ -87,4 +87,8 @@ add_executable(Algorytmy_laboratoria main.cpp
         zadania_12_01_2024/zad_2.cpp
         zadania_12_01_2024/HanoiTower.h
         zadania_12_01_2024/HanoiTower.cpp
+        ciphers/Ciphers.cpp
+        ciphers/Ciphers.h
+        deciphers/Deciphers.cpp
+        deciphers/Deciphers.h
 )
