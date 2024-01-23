@@ -14,6 +14,7 @@ Status rozwiązywania zadań ze wszystkich laboratoriów:
 - LAB9 (13.12.2023) - 1/1 - **100%**
 - LAB11 (10.01.2024) - 2/2 - **100%**
 - LAB12 (12.01.2024) - 2/2 - **100%**
+- LAB13/14 (17.01.2024) - 2/2 - **100%**
 
 ## Instrukcja uruchamiania poszczególnych zadań:
 
