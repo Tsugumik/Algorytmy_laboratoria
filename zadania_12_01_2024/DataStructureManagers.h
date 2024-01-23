@@ -9,7 +9,7 @@ class StackManager : public IDataStructure<T> {
 private:
     std::stack<T> _data;
 public:
-    void add(const T& element) override {
+    void add(const T &element) override {
         _data.push(element);
     }
 
@@ -23,7 +23,7 @@ public:
         return topElement;
     }
 
-    T& first() override {
+    T &first() override {
         if (isEmpty()) {
             throw std::underflow_error("Stack is empty. Cannot retrieve the first element.");
         }
@@ -35,7 +35,7 @@ public:
      * Nie powinno się uzyskiwać elementu stosu na jego spodzie
      * dlatego w tym przypadku funkcja zwraca to samo co first()
      */
-    T& last() override {
+    T &last() override {
         if (isEmpty()) {
             throw std::underflow_error("Stack is empty. Cannot retrieve the first element.");
         }
@@ -43,20 +43,20 @@ public:
         return _data.top();
     }
 
-    T& getN(unsigned int n) override {
-        if(n >= size()) {
+    T &getN(unsigned int n) override {
+        if (n >= size()) {
             throw std::out_of_range("Index out of range.");
         }
 
         std::stack<T> tempStack = _data;
-        for(unsigned int i = 0; i< n; i++) {
+        for (unsigned int i = 0; i < n; i++) {
             tempStack.pop();
         }
 
         return tempStack.top();
     }
 
-    bool find(const T& element) override {
+    bool find(const T &element) override {
         std::stack<T> tempStack = _data;
         while (!tempStack.empty()) {
             if (tempStack.top() == element) {
@@ -85,7 +85,7 @@ class QueueManager : public IDataStructure<T> {
 private:
     std::queue<T> _data;
 public:
-    void add(const T& element) override {
+    void add(const T &element) override {
         _data.push(element);
     }
 
@@ -99,7 +99,7 @@ public:
         return frontElement;
     }
 
-    T& first() override {
+    T &first() override {
         if (isEmpty()) {
             throw std::underflow_error("Queue is empty. Cannot retrieve the first element");
         }
@@ -107,7 +107,7 @@ public:
         return _data.front();
     }
 
-    T& last() override {
+    T &last() override {
         if (isEmpty()) {
             throw std::underflow_error("Queue is empty. Cannot retrieve the last element");
         }
@@ -115,7 +115,7 @@ public:
         return _data.back();
     }
 
-    T& getN(unsigned int n) override {
+    T &getN(unsigned int n) override {
         if (n >= size()) {
             throw std::out_of_range("Index out of range");
         }
@@ -128,7 +128,7 @@ public:
         return tempQueue.front();
     }
 
-    bool find(const T& element) override {
+    bool find(const T &element) override {
         std::queue<T> tempQueue = _data;
         while (!tempQueue.empty()) {
             if (tempQueue.front() == element) {
@@ -157,7 +157,7 @@ class VectorManager : public IDataStructure<T> {
 private:
     std::vector<T> _data;
 public:
-    void add(const T& element) override {
+    void add(const T &element) override {
         _data.push_back(element);
     }
 
@@ -171,7 +171,7 @@ public:
         return lastElement;
     }
 
-    T& first() override {
+    T &first() override {
         if (isEmpty()) {
             throw std::underflow_error("Vector is empty. Cannot retrieve the first element.");
         }
@@ -179,7 +179,7 @@ public:
         return _data.front();
     }
 
-    T& last() override {
+    T &last() override {
         if (isEmpty()) {
             throw std::underflow_error("Vector is empty. Cannot retrieve the last element.");
         }
@@ -187,7 +187,7 @@ public:
         return _data.back();
     }
 
-    T& getN(unsigned int n) override {
+    T &getN(unsigned int n) override {
         if (n >= size()) {
             throw std::out_of_range("Index out of range.");
         }
@@ -195,7 +195,7 @@ public:
         return _data[n];
     }
 
-    bool find(const T& element) override {
+    bool find(const T &element) override {
         for (unsigned int i = 0; i < _data.size(); ++i) {
             if (_data[i] == element) {
                 return true;

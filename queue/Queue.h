@@ -16,7 +16,7 @@ public:
     /**
      * @brief Konstruktor domyślny inicjalizujący rozmiar kolejki na 0.
      */
-    Queue() : _size(0) { }
+    Queue() : _size(0) {}
 
     /**
      * @brief Sprawdza, czy kolejka jest pusta.
@@ -41,7 +41,7 @@ public:
      *
      * @param element Element do dodania.
      */
-    void add(const T& element) {
+    void add(const T &element) {
         this->_linkedList.push(element);
         this->_size += 1;
     }
@@ -52,12 +52,12 @@ public:
      * @return Referencja do pierwszego elementu kolejki.
      * @throws std::underflow_error Jeśli kolejka jest pusta.
      */
-    const T& first() {
-        if(this->isEmpty()) {
+    const T &first() {
+        if (this->isEmpty()) {
             throw std::underflow_error("Queue is empty. Cannot retrieve the first element.");
         }
 
-        return this->_linkedList[this->_size-1];
+        return this->_linkedList[this->_size - 1];
     }
 
     /**
@@ -67,7 +67,7 @@ public:
      * @throws std::underflow_error Jeśli kolejka jest pusta.
      */
     T pop() {
-        if(this->isEmpty()) {
+        if (this->isEmpty()) {
             throw std::underflow_error("Queue is empty. Cannot pop from an empty queue.");
         }
 

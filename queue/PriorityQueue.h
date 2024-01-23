@@ -1,4 +1,5 @@
 #pragma once
+
 #include "../linked_list/LinkedList.h"
 #include "PriorityQueueNode.h"
 
@@ -16,7 +17,7 @@ public:
     /**
      * @brief Konstruktor domyślny inicjalizujący rozmiar kolejki na 0.
      */
-    PriorityQueue() : _size(0) { }
+    PriorityQueue() : _size(0) {}
 
     /**
      * @brief Sprawdza, czy kolejka priorytetowa jest pusta.
@@ -42,43 +43,44 @@ public:
      * @param element Element do dodania.
      * @param priority Priorytet elementu.
      */
-    void add(const T& element, int priority) {
-         if(this->isEmpty()) {
-             this->_linkedList.add(PriorityQueueNode<T>(priority));
-             this->_linkedList.begin()->getRef().add(element);
-         } else {
-             auto it = this->_linkedList.begin();
+    void add(const T &element, int priority) {
+        if (this->isEmpty()) {
+            this->_linkedList.add(PriorityQueueNode<T>(priority));
+            this->_linkedList.begin()->getRef().add(element);
+        } else {
+            auto it = this->_linkedList.begin();
 
-             while(it != nullptr && it->getRef().getPriority() != priority) {
-                 it = it->getNextEntityAddress();
-             }
+            while (it != nullptr && it->getRef().getPriority() != priority) {
+                it = it->getNextEntityAddress();
+            }
 
-             if(it != nullptr) {
-                 it->getRef().add(element);
-                 this->_size += 1;
-                 return;
-             }
+            if (it != nullptr) {
+                it->getRef().add(element);
+                this->_size += 1;
+                return;
+            }
 
-             it = this->_linkedList.begin();
-             while(it->getNextEntityAddress() != nullptr && it->getNextEntityAddress()->getRef().getPriority() < priority) {
-                 it = it->getNextEntityAddress();
-             }
+            it = this->_linkedList.begin();
+            while (it->getNextEntityAddress() != nullptr &&
+                   it->getNextEntityAddress()->getRef().getPriority() < priority) {
+                it = it->getNextEntityAddress();
+            }
 
-             if(it == this->_linkedList.begin()) {
-                 if(it->getRef().getPriority() < priority) {
-                     this->_linkedList.insert(PriorityQueueNode<T>(priority), it);
-                     it->getNextEntityAddress()->getRef().add(element);
-                 } else {
-                     this->_linkedList.push(PriorityQueueNode<T>(priority));
-                     this->_linkedList.begin()->getRef().add(element);
-                 }
-             } else {
-                 this->_linkedList.insert(PriorityQueueNode<T>(priority), it);
-                 it->getNextEntityAddress()->getRef().add(element);
-             }
-         }
+            if (it == this->_linkedList.begin()) {
+                if (it->getRef().getPriority() < priority) {
+                    this->_linkedList.insert(PriorityQueueNode<T>(priority), it);
+                    it->getNextEntityAddress()->getRef().add(element);
+                } else {
+                    this->_linkedList.push(PriorityQueueNode<T>(priority));
+                    this->_linkedList.begin()->getRef().add(element);
+                }
+            } else {
+                this->_linkedList.insert(PriorityQueueNode<T>(priority), it);
+                it->getNextEntityAddress()->getRef().add(element);
+            }
+        }
 
-         this->_size += 1;
+        this->_size += 1;
     }
 
     /**
@@ -87,8 +89,8 @@ public:
      * @return Referencja do pierwszego elementu w kolejce.
      * @throws std::underflow_error Jeśli kolejka jest pusta.
      */
-    const T& first() {
-        if(this->isEmpty()) {
+    const T &first() {
+        if (this->isEmpty()) {
             throw std::underflow_error("PriorityQueue is empty. Cannot pop from an empty queue.");
         }
 
@@ -102,13 +104,13 @@ public:
      * @throws std::underflow_error Jeśli kolejka jest pusta.
      */
     T pop() {
-        if(this->isEmpty()) {
+        if (this->isEmpty()) {
             throw std::underflow_error("PriorityQueue is empty. Cannot pop from an empty queue.");
         }
 
         T copy = this->_linkedList.end()->getRef().pop();
 
-        if( this->_linkedList.end()->getRef().isEmpty()) {
+        if (this->_linkedList.end()->getRef().isEmpty()) {
             _linkedList.erease(this->_linkedList.end());
         }
 

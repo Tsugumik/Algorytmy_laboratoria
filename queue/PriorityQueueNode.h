@@ -1,4 +1,5 @@
 #pragma once
+
 #include "Queue.h"
 
 /**
@@ -16,7 +17,7 @@ public:
      *
      * @param priority Priorytet węzła.
      */
-    explicit PriorityQueueNode(int priority) : _priority(priority) { }
+    explicit PriorityQueueNode(int priority) : _priority(priority) {}
 
     /**
      * @brief Pobiera priorytet węzła.

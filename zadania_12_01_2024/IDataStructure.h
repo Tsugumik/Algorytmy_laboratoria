@@ -21,7 +21,7 @@ public:
      *
      * @param element Element do dodania.
      */
-    virtual void add(const T& element) = 0;
+    virtual void add(const T &element) = 0;
 
     /**
      * @brief Usuwa i zwraca ostatni element ze struktury danych.
@@ -35,14 +35,14 @@ public:
      *
      * @return Referencja do pierwszego elementu.
      */
-    virtual T& first() = 0;
+    virtual T &first() = 0;
 
     /**
      * @brief Zwraca referencję do ostatniego elementu w strukturze danych.
      *
      * @return Referencja do ostatniego elementu.
      */
-    virtual T& last() = 0;
+    virtual T &last() = 0;
 
     /**
      * @brief Zwraca referencję do n-tego elementu w strukturze danych.
@@ -50,7 +50,7 @@ public:
      * @param n Indeks elementu.
      * @return Referencja do n-tego elementu.
      */
-    virtual T& getN(unsigned int n) = 0;
+    virtual T &getN(unsigned int n) = 0;
 
     /**
      * @brief Sprawdza, czy dany element istnieje w strukturze danych.
@@ -58,7 +58,7 @@ public:
      * @param element Element do znalezienia.
      * @return true, jeśli element istnieje, false w przeciwnym razie.
      */
-    virtual bool find(const T& element) = 0;
+    virtual bool find(const T &element) = 0;
 
     /**
      * @brief Zwraca liczbę elementów w strukturze danych.
