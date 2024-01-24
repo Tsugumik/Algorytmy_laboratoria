@@ -91,4 +91,6 @@ add_executable(Algorytmy_laboratoria main.cpp
         ciphers/Ciphers.h
         deciphers/Deciphers.cpp
         deciphers/Deciphers.h
+        zadania_17_01_2024/zad_1.cpp
+        zadania_17_01_2024/zad_2.cpp
 )
